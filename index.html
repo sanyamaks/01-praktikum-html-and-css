@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Отлично: Вы подключили normalize.css -->
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
   <title>Научиться учиться</title>
@@ -14,7 +15,8 @@
     <img class="logo logo_place_header" src="./images/logo.svg" alt="Логотип Яндекс">
     <h1 class="header__title">Научиться учиться</h1>
     <p class="header__subtitle">Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни?
-      <a class="header__link" href=#>Узнать →</a></p>
+      <!-- Можно лучше: для спец. символов нужно использовать специальные мнемоники, почитайте о них по ссылке https://ru.wikipedia.org/wiki/Мнемоники_в_HTML -->
+      <a class="header__link" href="#">Узнать →</a></p>
     <img class="header__main-illustration" src="./images/two_again.png" alt="">
     <div class="header__square-pic"></div>
   </header>
@@ -28,12 +30,13 @@
         </p>
 
         <div class="two-columns__main-text">
+          <!--Нужно исправить: Не используйте числительные в именах классов-->
           <p class="two-columns__paragraph two-columns__paragraph_first-paragraph">Ни в школе, ни в институте нас не
             учат тому, как правильно изучать материал.
             Мы готовимся к экзаменам и учим билеты. Мы тренируемся решать однообразные задачи, чтобы лучше сдать тест,
             но часто в итоге это не дает нам реального знания. Зубрежка быстро выветривается и не приносит пользы.</p>
-          <p class="two-columns__paragraph two-columns__paragraph_second-paragraph"><span
-            class="two-columns__span-accent">Вывод: </span>учиться тоже нужно
+          <!--Нужно исправить: Не используйте числительные в именах классов-->
+          <p class="two-columns__paragraph two-columns__paragraph_second-paragraph"><span class="two-columns__span-accent">Вывод: </span>учиться тоже нужно
             уметь, но почему-то этому мало где учат. Что с
             этим делать?</p>
           <p class="two-columns__paragraph">Конкретные техники и упражнения помогают изменить подход к обучению, сделать
@@ -98,6 +101,7 @@
     <section class="feinman">
       <h1 class="feinman__tittle">Метод Фейнмана</h1>
       <h3 class="feinman__subtitle">Выучить и не забыть.</h3>
+      <!-- Можно лучше: для спец. символов нужно использовать специальные мнемоники, почитайте о них по ссылке https://ru.wikipedia.org/wiki/Мнемоники_в_HTML -->
       <a class="feinman__link" href="#">Подробнее →</a>
       <img class="feinman__main-illustration" src="./images/feinman.png" alt="Фенйман">
     </section>
@@ -180,19 +184,58 @@
       </div>
       <div class="footer__column footer__column_content_social">
         <p class="footer__column-heading">Соцсети</p>
-        <a class="footer__column-links" href="https://facebook.com" target="_blank"><img class="footer__social-icons"
-                                                                                         src="./images/facebook_white.svg"
-                                                                                         alt="Facebook">Facebook</a>
-        <a class="footer__column-links" href="https://vk.com" target="_blank"><img class="footer__social-icons"
-                                                                                   src="./images/vk_white.svg"
-                                                                                   alt="ВКонтакте">ВКонтакте</a>
-        <a class="footer__column-links" href="https://instagram.com/" target="_blank"><img class="footer__social-icons"
-                                                                                           src="./images/instagram_white.svg"
-                                                                                           alt="Instagram">Instagram</a>
+        <a class="footer__column-links" href="https://facebook.com" target="_blank"><img class="footer__social-icons" src="./images/facebook_white.svg" alt="Facebook">Facebook</a>
+        <a class="footer__column-links" href="https://vk.com" target="_blank"><img class="footer__social-icons" src="./images/vk_white.svg" alt="ВКонтакте">ВКонтакте</a>
+        <a class="footer__column-links" href="https://instagram.com/" target="_blank"><img class="footer__social-icons" src="./images/instagram_white.svg" alt="Instagram">Instagram</a>
       </div>
     </div>
   </footer>
 
 </div>
+
+
 </body>
 </html>
+
+
+<!--
+
+  Отлично:
+
+
+    Вы не включаете текстовый контент в div
+    Вы используете правильные относительные пути к изображениям
+    У всех картинок есть атрибут alt
+    У вас верно подключены файлы стилей
+    Вы не фиксируете высоту текстового контента
+    Верстка соответствует брифу
+
+  Нужно исправить:
+
+
+    1. Однотипные повторяющиеся элементы (навигация; теги, которые воспринимаются перечислением) нужно реализовывать списком - http://htmlbook.ru/html/ul
+    2. Не используйте дополнительные классы в two-columns__paragraph, которые задают отступы.
+      Если завтра вам скажут поменять параграфы местами или добавить еще 10 новых, вам придется переписывать свои классы, поэтому
+      должен остаться только two-columns__paragraph, задайте ему такие стили, чтобы попадать в макет не важно в каком порядке
+      находятся блоки
+    3. Не используйте числительные в именах классах. Вы должны стремиться сделать универсальные классы
+   В реальном проекте вас могут попросить через некоторое время добавить еще 10 новых элементов или изменить порядок текущих, если
+   вы не используете универсальные имена классов, то вам придется каждый раз менять порядок числительных
+    4. h1 это главный заголовок на сайте, он должен быть единственным
+
+  Можно лучше:
+
+    1. Для спец. символов нужно использовать специальные мнемоники, почитайте о них по ссылке https://ru.wikipedia.org/wiki/Мнемоники_в_HTML
+    2. Реализуйте feinman__main-illustration как фоновое изображение у feinman
+
+
+
+  Всегда используйте валидатор для самопроверки верстки https://validator.w3.org/nu/#textarea .
+  Он поможет отловить большинство ошибок.
+
+  Не удаляйте, пожалуйста, мои комментарии до принятия работы.
+
+  Напоминаю вам, что работа принимается только после исправления всех замечаний с пометкой "Нужно исправить", пометки
+  "Можно лучше" также желательны к исправлению для вашего развития, однако, с ними работа будет принята.
+
+-->

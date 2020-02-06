@@ -96,11 +96,9 @@
 
       <div class="video__iframes">
         <iframe class="video__iframe" width="515" height="316" src="https://www.youtube.com/embed/5MgBikgcWnY"
-                frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         <iframe class="video__iframe" width="515" height="316" src="https://www.youtube.com/embed/arj7oStGLkU"
-                frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
       </div>
@@ -186,26 +184,31 @@
 
     <section class="khan">
       <div class="khan__container">
-        <h2 class="khan__author">Салман Хан</h2>
-        <h3 class="khan__title">Весь мир — школа</h3>
+        <p class="khan__author">Салман Хан</p>
+        <h2 class="khan__title">Весь мир — школа</h2>
+
         <blockquote class="khan__quote">Страсть и новаторство Сала Хана меняют процесс обучения миллионов студентов по
           всему миру. Книгу «Весь мир — школа» нужно прочитать всем, кто занимается образованием — так учащиеся повсюду
           смогут получить навыки и знания, которые приносят успех в школе, карьере и жизни.
         </blockquote>
-        <h4 class="khan__quote-author">Джордж Лукас</h4>
-        <p class="khan__quote-author-subline">Кинорежиссер, продюсер</p>
-      </div>
-      <div class="khan__book-container">
-        <img class="khan__book-pic" src="./images/book.jpg" alt="book">
-        <a class="khan__buy-link" href=#>Купить книгу &rarr;</a>
-      </div>
 
+        <p class="khan__quote-author">Джордж Лукас</p>
+        <p class="khan__quote-author-subline">Кинорежиссер, продюсер</p>
+
+        <div class="khan__book-container">
+          <img class="khan__book-pic" src="./images/book.jpg" alt="book">
+          <!-- AM: Обертка ссылки, чтобы ссылка была исключительно на тексте, а не по всей высоте khan__book-container -->
+          <div class="khan__buy-link-container">
+            <a class="khan__buy-link" href=#>Купить книгу &rarr;</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="kaufman">
       <h2 class="section-title section_theme_dark">Принципы обучения</h2>
       <h3 class="section-subtitle section_theme_dark">от Джоша Кауфмана</h3>
-      <!--После лекции Лизы Голубенко оставил модификатор table_theme_dark только у родительского класса table и
+      <!--AM: После лекции Лизы Голубенко оставил модификатор table_theme_dark только у родительского класса table и
       использовал вложенность, чтобы не было нагромождении и постоянных повторений -->
       <ul class="table table_theme_dark">
 
@@ -265,6 +268,29 @@
       <img class="kaufman__triangle" src="./images/triangle.svg" alt="">
 
     </section>
+
+    <section class="resources">
+      <h2 class="section-title">Полезные ресурсы</h2>
+      <h3 class="section-subtitle">Больше материалов о техниках и лайфхаках обучения</h3>
+
+      <ul class="resources__logo-zone">
+        <li class="resources__logo-container"><a class="resources__logo-link" href="https://arzamas.academy/"
+                                                 target="_blank"><img class="resources__logo" src="./images/arzamas.svg"
+                                                                      alt="Арзаамас"></a>
+        </li>
+        <li class="resources__logo-container"><a class="resources__logo-link" href="https://nplus1.ru/" target="_blank"><img
+          class="resources__logo" src="./images/n1.svg" alt="Н+1"></a></li>
+        <li class="resources__logo-container"><a class="resources__logo-link" href="https://strelka.com/ru"
+                                                 target="_blank"><img class="resources__logo" src="./images/strelka.svg"
+                                                                      alt="Стрелка"></a>
+        </li>
+        <li class="resources__logo-container"><a class="resources__logo-link" href="https://polka.academy/"
+                                                 target="_blank"><img class="resources__logo" src="./images/polka.svg"
+                                                                      alt="Полка"></a></li>
+      </ul>
+
+    </section>
+
   </main>
 
   <footer class="footer">

@@ -14,4 +14,4 @@ HTML5, CSS3, BEM
 - Запустить проект - `npm run start`
 
 ## Ссылка на github pages:
-https://sanyamaks.github.io/01-praktikum-html-and-css.git/
+https://sanyamaks.github.io/01-praktikum-html-and-css/
